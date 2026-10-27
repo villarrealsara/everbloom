@@ -48,10 +48,10 @@ export class Producto {
       errores.push('El nombre del producto es obligatorio.');
     }
     if (!Number.isInteger(Number(this.idCategoria)) || Number(this.idCategoria) <= 0) {
-      errores.push('La categoria debe ser un numero valido.');
+      errores.push('La categoría debe ser un número válido.');
     }
     if (Number.isNaN(Number(this.precio)) || Number(this.precio) < 0) {
-      errores.push('El precio debe ser un numero mayor o igual a cero.');
+      errores.push('El precio debe ser un número mayor o igual a cero.');
     }
     return errores;
   }
