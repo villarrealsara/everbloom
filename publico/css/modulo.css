@@ -1,0 +1,23 @@
+/* Ajustes pequenos del modulo de Productos.
+   La hoja styles.css es la misma del prototipo (AA4-EV03) y no se modifica. */
+body.pg-inicio { min-height: 100vh; display: flex; flex-direction: column; }
+body.pg-inicio .products-grid { flex: 1; align-content: start; }
+body.pg-inicio .catalog-search form { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+body.pg-inicio .catalog-search label { margin-right: 4px; }
+body.pg-inicio .catalog-toolbar .btn { padding: 10px 26px; font-size: .75rem; }
+body.pg-inicio .catalog-search .btn { padding: 8px 20px; font-size: .72rem; }
+.product-extra { font-size: .78rem; color: var(--text-mid); letter-spacing: .06em; }
+.product-extra.inactivo { color: var(--error); }
+.product-actions form { margin: 0; }
+body.pg-inicio .product-card .btn-primary { background: var(--primary-dark); }
+.mensaje { padding: 14px 18px; border-radius: var(--radius-sm); margin-bottom: 18px; border-left: 5px solid; background: #fff8f7; font-size: .9rem; }
+.mensaje-error { color: var(--error); border-color: var(--error); }
+.mensaje-exito { color: var(--ok); border-color: var(--ok); }
+.mensaje ul { margin: 6px 0 0 20px; }
+.form-group.casilla { flex-direction: row; align-items: center; gap: 10px; }
+.form-group.casilla input { width: auto; }
+body.pg-pedido .order-form-box .btn-outline { text-align: center; }
+a.btn { text-align: center; }
+body.pg-confirmado .mensaje { margin-bottom: 24px; background: rgba(255,255,255,.7); }
+body.pg-confirmado .check-circle img { border-radius: 50%; }
+body.pg-inicio .catalog-search { flex-wrap: wrap; }
