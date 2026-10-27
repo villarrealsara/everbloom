@@ -1,0 +1,9 @@
+INICIO RAPIDO - GA7-220501096-AA2-EV02
+1) Enciende MySQL y crea la base de datos (una sola vez), en PowerShell dentro de esta carpeta:
+     mysql -u root -p < base-datos/everbloom.sql
+     mysql -u root -p everbloom < base-datos/datos-prueba.sql
+2) Doble clic en ejecutar.bat  (te abre el Bloc de notas para que escribas la clave de MySQL en BD_CLAVE).
+   El archivo hace solo: npm install, las pruebas y enciende la pagina.
+3) Capturas: resultado de las pruebas, y en http://localhost:3000/productos la lista, el formulario de producto nuevo,
+   la pagina de producto guardado, un error (nombre vacio) y la busqueda.
+4) Commits y GitHub: sigue GUIA_AA2_EV02.txt (pasos 4 y 5).

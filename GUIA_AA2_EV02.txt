@@ -1,0 +1,55 @@
+GUIA GA7-220501096-AA2-EV02  (Modulos de software codificados y probados)
+Sara, esto se hace en el computador donde ya tienes la carpeta "everbloom" con Git (la de la EV01).
+
+PASO 0. Guardar el punto de la EV01 (opcional pero recomendado)
+  Abre PowerShell dentro de la carpeta everbloom y escribe:
+    git tag aa2-ev01
+    git push origin aa2-ev01
+
+PASO 1. Copiar los archivos nuevos
+  1. Descomprime SARAVILLARREAL_AA2_EV02.zip en otra carpeta (clic derecho > Extraer todo).
+  2. Copia TODO el contenido de la carpeta "everbloom" del ZIP y pegalo dentro de tu carpeta
+     everbloom de la EV01. Cuando pregunte, elige "Reemplazar los archivos".
+     (Tu archivo .env no esta en el ZIP, asi que se queda como esta.)
+
+PASO 2. Instalar y probar
+    npm install
+    npm run probar-web
+  Debe terminar con "Todas las pruebas pasaron." (toma captura).
+
+PASO 3. Ver la pagina
+    npm run web
+  Abre en el navegador http://localhost:3000 y toma capturas de:
+    a) la lista de productos
+    b) el formulario de producto nuevo
+    c) la pagina de "producto guardado" despues de enviar el formulario
+    d) un error (deja el nombre vacio y envia)
+    e) la busqueda (escribe algo y pulsa Buscar; la direccion muestra ?busqueda=...)
+  Para detener el servidor pulsa Ctrl + C.
+
+PASO 4. Commits por funcionalidad (uno por cada bloque)
+    git add package.json package-lock.json
+    git commit -m "Agrega Express para la version web"
+    git add src/servicios
+    git commit -m "Agrega consulta de categorias y busqueda de productos por nombre"
+    git add src/vistas
+    git commit -m "Agrega vistas HTML: lista, formulario y resultado"
+    git add src/rutas
+    git commit -m "Agrega rutas GET y POST de productos"
+    git add src/servidor.js src/iniciar-servidor.js
+    git commit -m "Agrega servidor web"
+    git add publico
+    git commit -m "Agrega estilos de las paginas"
+    git add src/modelos src/pruebas
+    git commit -m "Agrega prueba del flujo web y mensajes con tildes"
+    git add .
+    git commit -m "Actualiza LEEME y enlace del repositorio (EV02)"
+    git push
+
+PASO 5. Verificar
+  Entra a https://github.com/villarrealsara/everbloom y confirma que se ven los commits nuevos
+  y que NO aparece el archivo .env. Toma captura.
+
+PASO 6. Entregar
+  Sube a Zajuna el ZIP SARAVILLARREAL_AA2_EV02.zip (ya incluye ENLACE_REPOSITORIO.txt).
+  Si algun comando da error, copiame el mensaje completo y lo revisamos.
