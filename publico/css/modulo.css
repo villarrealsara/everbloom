@@ -21,3 +21,9 @@ a.btn { text-align: center; }
 body.pg-confirmado .mensaje { margin-bottom: 24px; background: rgba(255,255,255,.7); }
 body.pg-confirmado .check-circle img { border-radius: 50%; }
 body.pg-inicio .catalog-search { flex-wrap: wrap; }
+
+/* Modulo Pedidos */
+.form-estado { display: flex; gap: 6px; align-items: center; margin: 0; }
+.form-estado select, .catalog-search select { padding: 7px 10px; border-radius: var(--radius-sm); border: 1px solid #d9c7c4; font-family: inherit; }
+.form-estado .btn { padding: 8px 16px; font-size: .7rem; }
+body.pg-confirmado .client-info p { margin: 3px 0; }

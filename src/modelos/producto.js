@@ -46,6 +46,8 @@ export class Producto {
     const errores = [];
     if (!this.nombreProducto || String(this.nombreProducto).trim() === '') {
       errores.push('El nombre del producto es obligatorio.');
+    } else if (String(this.nombreProducto).trim().length > 150) {
+      errores.push('El nombre del producto no puede pasar de 150 caracteres.');
     }
     if (!Number.isInteger(Number(this.idCategoria)) || Number(this.idCategoria) <= 0) {
       errores.push('La categoría debe ser un número válido.');
