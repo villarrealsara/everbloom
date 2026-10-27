@@ -2,6 +2,7 @@
 import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { crearRutasProducto } from './rutas/producto-rutas.js';
+import { crearRutasPedido } from './rutas/pedido-rutas.js';
 import { vistaResultado } from './vistas/resultado.js';
 
 const CARPETA_PUBLICA = fileURLToPath(new URL('../publico/', import.meta.url));
@@ -20,6 +21,7 @@ export function crearAplicacion() {
     respuesta.redirect('/productos');
   });
   aplicacion.use('/productos', crearRutasProducto());
+  aplicacion.use('/pedidos', crearRutasPedido());
 
   // Pagina para direcciones que no existen.
   aplicacion.use((peticion, respuesta) => {

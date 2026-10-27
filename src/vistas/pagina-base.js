@@ -18,6 +18,7 @@ export function paginaBase({ titulo, contenido, claseCuerpo = 'pg-inicio', barra
       <li><a href="/productos"${titulo === 'Productos' ? ' class="active"' : ''}>Inicio</a></li>
       <li><a href="/productos">Catálogo</a></li>
       <li><a href="/productos/nuevo">Nuevo producto</a></li>
+      <li><a href="/pedidos"${titulo === 'Pedidos' ? ' class="active"' : ''}>Pedidos</a></li>
     </ul>
   </nav>
 `
