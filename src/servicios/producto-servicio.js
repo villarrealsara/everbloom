@@ -13,10 +13,10 @@ const CONSULTA_BASE = `
  */
 function traducirError(error) {
   if (error.code === 'ER_NO_REFERENCED_ROW_2') {
-    return new Error('La categoria indicada no existe.');
+    return new Error('La categoría indicada no existe.');
   }
   if (error.code === 'ER_ROW_IS_REFERENCED_2') {
-    return new Error('No se puede eliminar: el producto ya esta en algun pedido.');
+    return new Error('No se puede eliminar: el producto ya está en algún pedido.');
   }
   if (error.code === 'ER_CHECK_CONSTRAINT_VIOLATED') {
     return new Error('El precio no puede ser negativo.');
@@ -73,6 +73,18 @@ export async function consultarProductoPorId(idProducto) {
     [idProducto],
   );
   return filas.length === 0 ? null : Producto.desdeFila(filas[0]);
+}
+
+/**
+ * LEER: busca productos cuyo nombre contenga el texto indicado.
+ */
+export async function buscarProductosPorNombre(texto) {
+  const conexion = await obtenerConexion();
+  const [filas] = await conexion.execute(
+    `${CONSULTA_BASE} WHERE p.nombre_producto LIKE ? ORDER BY p.id_producto`,
+    [`%${texto}%`],
+  );
+  return filas.map((fila) => Producto.desdeFila(fila));
 }
 
 /**
