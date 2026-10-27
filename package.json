@@ -1,15 +1,18 @@
 {
   "name": "everbloom",
-  "version": "1.0.0",
-  "description": "EVERBLOOM - Modulo de Productos (CRUD con MySQL) - GA7-220501096-AA2-EV01",
+  "version": "2.0.0",
+  "description": "EVERBLOOM - Modulo de Productos web (CRUD con MySQL) - GA7-220501096-AA2-EV02",
   "type": "module",
   "scripts": {
     "menu": "node --env-file=.env src/menu-productos.js",
-    "probar": "node --env-file=.env src/pruebas/probar-crud.js"
+    "probar": "node --env-file=.env src/pruebas/probar-crud.js",
+    "web": "node --env-file=.env src/iniciar-servidor.js",
+    "probar-web": "node --env-file=.env src/pruebas/probar-web.js"
   },
   "author": "Sara Julieth Villarreal Ortiz",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.22.3",
     "mysql2": "^3.11.0"
   }
 }
